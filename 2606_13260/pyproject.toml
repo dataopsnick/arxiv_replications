@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dysco"
+version = "0.1.0"
+description = "Minimal reproduction of DYSCO: extracting governing equations from latent dynamics via multi-view contrastive learning (arXiv:2606.13260)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "OpenResearch reproduction" }]
+keywords = [
+    "contrastive-learning", "system-identification", "dynamical-systems",
+    "latent-dynamics", "InfoNCE", "neuroscience",
+]
+dependencies = [
+    "torch>=2.0",
+    "numpy>=1.21",
+]
+
+[project.urls]
+Paper = "https://arxiv.org/abs/2606.13260"
+
+[project.scripts]
+dysco = "dysco.cli:main"
+
+[tool.setuptools]
+packages = ["dysco"]
