@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "self-harness"
+version = "0.1.0"
+description = "Minimal, faithful reproduction of arXiv 2606.09498 — Self-Harness: Harnesses That Improve Themselves."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "OpenResearch reproduction" }]
+keywords = ["llm", "agents", "self-improvement", "harness", "reproduction"]
+# No third-party runtime dependencies: the OpenRouter client uses only the
+# standard library, so it installs and runs cleanly in Google Colab.
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+self-harness = "self_harness.cli:main"
+
+[project.urls]
+Paper = "https://arxiv.org/abs/2606.09498"
+
+[tool.setuptools]
+packages = ["self_harness"]
