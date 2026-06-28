@@ -1,0 +1,22 @@
+{
+  "config": {
+    "model": "casperhansen/deepseek-r1-distill-qwen-1.5b-awq",
+    "dataset": "math500",
+    "n": 50,
+    "lam": 2.0,
+    "max_tokens": 8192,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "seed": 0
+  },
+  "no_penalty": {
+    "acc": 78.0,
+    "mean_cot_tokens": 3473.82
+  },
+  "penalty": {
+    "acc": 76.0,
+    "mean_cot_tokens": 2194.76
+  },
+  "delta_acc": -2.0,
+  "delta_len_pct": -36.81998491574117
+}
